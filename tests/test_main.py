@@ -1,5 +1,10 @@
-from main import main
+# pylint: disable=E0611, W0612
+
+from PySide6.QtWidgets import QApplication
+from main import MainWindow
 
 
-def test_main():
-    assert main() is None
+def test_main_window_title():
+    app = QApplication.instance() or QApplication([])
+    window = MainWindow()
+    assert window.windowTitle() == "PySide6 template"

@@ -6,7 +6,7 @@ test:
 	pytest -vv --cov=main --cov=utils tests/test_*.py
 
 format:
-	black . *.py
+	black .
 
 lint:
 	pylint --disable=R,C *.py utils/*.py tests/*.py

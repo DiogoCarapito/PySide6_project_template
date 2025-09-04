@@ -161,3 +161,7 @@ cython_debug/
 
 #macOS files
 .DS_Store
+
+#PySide build and dist files
+main.build/
+main.dist/
