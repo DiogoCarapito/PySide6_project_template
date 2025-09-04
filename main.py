@@ -16,13 +16,15 @@ from PySide6.QtCore import Qt
 
 from utils.utils import load_csv
 
-#import sys
+# import sys
 import sys, os
+
 
 def resource_path(rel_path):
     if hasattr(sys, "_MEIPASS"):
         return os.path.join(sys._MEIPASS, rel_path)
     return rel_path
+
 
 # def resource_path(rel_path):
 #     if hasattr(sys, "_MEIPASS"):
@@ -68,7 +70,7 @@ class MainWidget(QWidget):
         layout.addWidget(label)
 
         # CSV contents centered below the label
-        #csv_content = load_csv(resource_path("data/data.csv"))
+        # csv_content = load_csv(resource_path("data/data.csv"))
         csv_content = load_csv("data/data.csv")
         csv_label = QLabel(csv_content)
         csv_label.setAlignment(Qt.AlignCenter)
@@ -77,7 +79,7 @@ class MainWidget(QWidget):
         # Image centered below CSV
         image_label = QLabel()
         image_pixmap = QPixmap(resource_path("assets/images/image_example.png"))
-        #image_pixmap = QPixmap("assets/images/image_example.png")
+        # image_pixmap = QPixmap("assets/images/image_example.png")
         image_label.setPixmap(image_pixmap)
         image_label.setAlignment(Qt.AlignCenter)
         layout.addWidget(image_label)
