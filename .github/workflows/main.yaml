@@ -9,8 +9,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
-    - name: Install libEGL
-      run: sudo apt-get update && sudo apt-get install -y libegl1
     - name: Set up Python 3.12.5
       uses: actions/setup-python@v5
       with:
@@ -21,10 +19,9 @@ jobs:
     - name: Lint with pylint
       run: |
         make lint
-    - name: Install Xvfb
-      run: sudo apt-get update && sudo apt-get install -y xvfb
-    - name: Run tests with Xvfb
-      run: xvfb-run -a pytest -vv --cov=src tests/test_*.py
+    - name: Test with pytest
+      run: |
+        make test
     - name: Format code
       run: |
         make format

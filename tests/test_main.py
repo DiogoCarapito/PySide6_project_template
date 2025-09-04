@@ -1,5 +1,8 @@
 # pylint: disable=E0611, W0612
 
+import os
+import pytest
+
 from PySide6.QtWidgets import QApplication
 from main import MainWindow
 
