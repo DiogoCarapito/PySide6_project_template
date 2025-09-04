@@ -1,8 +1,8 @@
-# python_project_template
+# PySide6_project_template
 
-[![Github Actions Workflow](https://github.com/DiogoCarapito/python_project_template/actions/workflows/main.yaml/badge.svg)](https://github.com/DiogoCarapito/python_project_template/actions/workflows/main.yaml)
+[![Github Actions Workflow](https://github.com/DiogoCarapito/PySide6_project_template/actions/workflows/main.yaml/badge.svg)](https://github.com/DiogoCarapito/PySide6_project_template/actions/workflows/main.yaml)
 
-Python project template.
+PySide6_project_template
 
 Python version: 3.12
 
