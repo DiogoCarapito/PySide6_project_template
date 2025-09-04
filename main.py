@@ -1,6 +1,6 @@
-# pylint: disable=E0611, W0212
+# pylint: disable=E0611
 
-
+import sys
 from PySide6.QtWidgets import (
     QApplication,
     QMainWindow,
@@ -14,24 +14,7 @@ from PySide6.QtWidgets import (
 from PySide6.QtGui import QIcon, QAction, QFont, QPixmap
 from PySide6.QtCore import Qt
 
-from utils.utils import load_csv
-
-# import sys
-import sys, os
-
-
-def resource_path(rel_path):
-    if hasattr(sys, "_MEIPASS"):
-        return os.path.join(sys._MEIPASS, rel_path)
-    return rel_path
-
-
-# def resource_path(rel_path):
-#     if hasattr(sys, "_MEIPASS"):
-#         # Bundled app (PyInstaller/Nuitka)
-#         return os.path.join(sys._MEIPASS, rel_path)
-#     # Development mode: relative to project root
-#     return os.path.join(os.path.dirname(__file__), "..", rel_path)
+from utils.utils import load_csv, resource_path
 
 
 class MenuBar(QMenuBar):
