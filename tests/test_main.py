@@ -8,7 +8,7 @@ from main import MainWindow
 
 
 def test_main_window_title():
-    if os.environ.get("CI"):
+    if os.environ.get("CI") == "true" or os.environ.get("GITHUB_ACTIONS") == "true":
         pytest.skip("Skipping GUI test in CI environment")
     app = QApplication.instance() or QApplication([])
     window = MainWindow()
